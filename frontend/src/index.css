@@ -5,13 +5,49 @@ body {
 }
 
 .note {
-  background-color: white;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-  color: #333;
-  width: 200px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+  color: black;
+  border-radius: 8px;
+  padding: 12px;
+  margin: 8px;
+  width: auto;
+  /* Allow the note to size dynamically */
+  max-width: 300px;
+  /* Maximum width for a note */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  word-wrap: break-word;
+  /* Ensures long words wrap to the next line */
+  display: inline-block;
+  /* Ensures notes align horizontally if there's space */
+  vertical-align: top;
+}
+
+/* Ensure text content determines height */
+.note p {
+  margin: 8px 0;
+  white-space: pre-wrap;
+  /* Ensures whitespace and line breaks are preserved */
+}
+
+/* Footer styling with delete icon */
+.note-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #888;
+  margin-top: 12px;
+}
+
+/* Styling for delete icon */
+.delete-icon {
+  cursor: pointer;
+  color: #777;
+  transition: color 0.2s;
+}
+
+.delete-icon:hover {
+  color: #f44336;
 }
 
 .note-input {
@@ -45,7 +81,7 @@ h1 {
   margin-top: 0px;
   height: 70px;
   width: 100%;
-  background-color: black;
+  background-color: #352f44;
 }
 
 .notes-list {
