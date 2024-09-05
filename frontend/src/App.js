@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Note from './components/Note';
 
+
 const App = () => {
   const [notes, setNotes] = useState([]);
   const [newNote, setNewNote] = useState({ title: '', content: '' });
@@ -29,7 +30,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>Notes</h1>
+      <h1>--Notes</h1>
       <div className="note-input">
         <input
           type="text"
