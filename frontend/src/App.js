@@ -1,9 +1,9 @@
-// frontend/src/App.js
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import Note from './components/Note';
-
+//Set new note
 const App = () => {
   const [notes, setNotes] = useState([]);
   const [newNote, setNewNote] = useState({ title: '', content: '' });
@@ -12,10 +12,14 @@ const App = () => {
     fetchNotes();
   }, []);
 
+  //Fetching the data form  db
+
   const fetchNotes = async () => {
     const response = await axios.get('http://localhost:5000/api/notes');
     setNotes(response.data);
   };
+
+  //Adding the Note to the db
 
   const addNote = async () => {
     const response = await axios.post('http://localhost:5000/api/notes', newNote);
@@ -23,6 +27,7 @@ const App = () => {
     setNewNote({ title: '', content: '' });
   };
 
+  //Delete Note form db 
   const deleteNote = async (id) => {
     await axios.delete(`http://localhost:5000/api/notes/${id}`);
     setNotes(notes.filter(note => note.id !== id));

@@ -1,11 +1,11 @@
-// backend/db.js
+//This file is for only to Setup the database
 const mysql = require('mysql2');
 
 const connection = mysql.createConnection({
-    host: '127.0.0.1',
-    user: 'root',
-    password: 'Aakash@312003',
-    database: 'notes_db',
+    host: 'Your_Hostid',
+    user: 'User',
+    password: 'Your_password',
+    database: 'Your_db',
 });
 
 connection.connect((err) => {

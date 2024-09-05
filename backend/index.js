@@ -1,4 +1,4 @@
-// backend/index.js
+//Setting up the Server 
 const express = require('express');
 const cors = require('cors');
 const notesRoutes = require('./routes/notes');

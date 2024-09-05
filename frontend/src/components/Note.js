@@ -1,5 +1,6 @@
-// frontend/src/components/Note.js
+
 import React from 'react';
+//Accessing Fonts form Font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,7 +11,7 @@ const Note = ({ note, onDelete }) => {
             <p>{note.content}</p>
             <div className="note-footer">
                 <small>{new Date(note.created_at).toLocaleString()}</small>
-                <button>  <FontAwesomeIcon icon={faTrash} className="delete-icon" onClick={() => onDelete(note.id)} Delete /></button>
+                <button id='delete-button'>  <FontAwesomeIcon icon={faTrash} className="delete-icon" onClick={() => onDelete(note.id)} Delete /></button>
             </div>
         </div>
     );

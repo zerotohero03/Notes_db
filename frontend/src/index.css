@@ -11,14 +11,10 @@ body {
   padding: 12px;
   margin: 8px;
   width: auto;
-  /* Allow the note to size dynamically */
   max-width: 300px;
-  /* Maximum width for a note */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   word-wrap: break-word;
-  /* Ensures long words wrap to the next line */
   display: inline-block;
-  /* Ensures notes align horizontally if there's space */
   vertical-align: top;
 }
 
@@ -26,7 +22,7 @@ body {
 .note p {
   margin: 8px 0;
   white-space: pre-wrap;
-  /* Ensures whitespace and line breaks are preserved */
+
 }
 
 /* Footer styling with delete icon */
@@ -44,7 +40,8 @@ body {
   cursor: pointer;
   color: #777;
   transition: color 0.2s;
-  background-color: #777;
+  size: 20px;
+
 }
 
 .delete-icon:hover {
@@ -88,4 +85,8 @@ h1 {
 .notes-list {
   display: flex;
   justify-content: center;
+}
+
+#delete-button {
+  background-color: white;
 }
